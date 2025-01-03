@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Liste des équipements</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body>
+
+{% include 'nav.twig' %}
+
+    <div class="container">
+        <h3 id="student-list-title"></h3>
+        <div>
+            <div style="float:right"><a class="btn-add" href="/equipment/create">Ajouter un équipement</a></div>
+            <table class="students-table">
+                <tr>
+                     <th>ID</th>
+                     <th>Nom</th>
+                     <th>État</th>
+                     <th>Disponibilité</th>
+                     <th>Actions</th>
+                </tr>
+
+                 {% for equipment in equipments %}
+                    <tr class="student-info">
+                          <td>{{ equipment.id }}</td>
+                          <td>{{ equipment.nom }}</td>
+                          <td>{{ equipment.etat }}</td>
+                          <td>{{ equipment.disponibilite ? 'Disponible' : 'Indisponible' }}</td>
+                          <td>
+                              <a class="btn btn-secondary" href="/equipment/edit/{{ equipment.id }}">Modifier</a> --|-- <a class="btn btn-cancel" href="/equipment/delete/{{ equipment.id }}" onclick="return confirm('Êtes-vous sûr ?');">Supprimer</a>
+                          </td>
+                    </tr>
+                 {% endfor %}
+            </table>
+        </div>
+    </div>
+    <script src="/js/scp_cours.js"></script>
+</body>
+
+</html>

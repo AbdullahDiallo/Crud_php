@@ -1,0 +1,45 @@
+Gestion de Ferme - Version 3
+
+Ce projet est une application permettant de gérer les activités et les ressources d'une ferme. La version 3 introduit l'intégration de Doctrine ORM pour la gestion des bases de données et de Twig comme moteur de template pour la partie front-end.
+Objectifs du Projet
+L'objectif principal est de permettre la gestion des entités suivantes :
+•	Animaux Gestion des informations telles que le type, l’âge, la santé, et l’équipement associé (#idEquipement).
+•	Équipements agricoles : Gestion des noms, des états et de la disponibilité des équipements.
+Fonctionnalités Principales
+1.	Gestion des Animaux :
+o	Ajouter un nouvel animal.
+o	Lister tous les animaux existants.
+o	Modifier les informations d'un animal.
+o	Supprimer un animal.
+2.	Gestion des Équipements :
+o	Ajouter un nouvel équipement.
+o	Lister tous les équipements disponibles.
+o	Modifier les détails d'un équipement.
+o	Supprimer un équipement.
+Technologies Utilisées
+•	Back-end : 
+o	PHP 8+ : langage de programmation principal.
+o	Doctrine ORM : Gestion des entités et interactions avec la base de données.
+•	Front-end : 
+o	Twig comme moteur de template pour une interface utilisateur propre et organisée.
+•	Outils et Dépendances : 
+o	Composer pour la gestion des dépendances.
+o	Phpunit : Outil pour les tests unitaires.
+Installation
+Prérequis
+•	PHP 8+ installé.
+•	Composer installé.
+•	Serveur local (Apache, Nginx ou PHP intégré).
+Étapes
+1.	Installez les dépendances avec Composer :
+2.	Composer Install
+3.	Configurez la base de données dans le fichier App/config/database.php.
+4.	Exécutez les migrations Doctrine pour créer les tables dans la base de données :
+5.	php vendor/bin/doctrine orm:schema-tool:create
+6.	Lancez le serveur intégré PHP :
+7.	Php -S localhost :8000 -t public
+8.	Accédez à l'application dans votre navigateur via http://localhost:8000.
+
+Auteurs : Abdoulaye DIALLO
+Projet réalisé dans le cadre de l'apprentissage des concepts CRUD en PHP/MVC enseigné par M LO.
+

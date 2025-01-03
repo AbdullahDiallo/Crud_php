@@ -1,0 +1,73 @@
+README - Gestion des Rendez-vous et des Clients (Version 2)
+________________________________________
+Bienvenue dans la version 2 de notre système de gestion des rendez-vous et des clients. Cette version met en œuvre les principes de la programmation orientée objet (POO), la structure MVC, et des fonctionnalités avancées pour améliorer l'expérience utilisateur et la gestion des données.
+________________________________________
+📋 Table des matières
+1.	Description du projet
+2.	Fonctionnalités principales
+3.	Architecture du projet
+4.	Configuration requise
+5.	Installation
+6.	Structure de la base de données
+7.	Fonctionnement du système
+8.	Points forts
+________________________________________
+🖥️ Description du projet
+Le système est conçu pour gérer efficacement les clients et leurs rendez-vous. Avec une plage horaire définie (9h à 18h) et une validation des dates, le projet garantit que les rendez-vous sont bien planifiés et sans conflits.
+La version 2 introduit une sécurité renforcée, la validation des données côté serveur et des fonctionnalités avancées comme la gestion des conflits d'horaire.
+________________________________________
+🚀 Fonctionnalités principales
+Clients
+•	Ajouter, modifier, afficher et supprimer des clients.
+•	Consulter les rendez-vous d’un client spécifique.
+Rendez-vous
+•	Créer des rendez-vous avec des validations strictes : 
+o	Plage horaire entre 9h et 18h.
+o	Dates toujours postérieures à la date actuelle.
+o	Gestion des conflits d’horaire.
+•	Modifier ou annuler des rendez-vous. 
+ Sécurité
+•	Utilisation de PDO pour éviter les attaques par injection SQL.
+•	Validation côté serveur des données (dates, heures, clients).
+________________________________________
+
+⚙️ Configuration requise
+•	Serveur Web : Apache ou Nginx.
+•	PHP : Version 7.4 ou supérieure (avec PDO activé).
+•	Base de données : MySQL 5.7 ou supérieure.
+•	Navigateur : Tout navigateur moderne (Chrome, Firefox, Edge).
+________________________________________
+🛠️ Installation
+1.	Acceder au dossier V2
+2.	Configurer la base de données
+Importez le fichier SQL fourni (database.sql) dans votre serveur MySQL.
+3.	mysql -u utilisateur -p nom_bdd < database.sql
+4.	Configurer le fichier database.php
+Mettez à jour les identifiants de connexion :
+5.	$host = 'localhost';
+6.	$dbname = 'nom_bdd';
+7.	$username = 'utilisateur';
+8.	$password = 'motdepasse';
+9.	Lancer le serveur local
+Si vous utilisez PHP, lancez le serveur intégré :
+10.	php -S localhost:8000 -t public/
+11.	Accéder au projet
+Ouvrez votre navigateur à l’adresse : http://localhost:8000.
+________________________________________
+
+💡 Fonctionnement du système
+Routeur principal
+Le fichier public/index.php route les requêtes vers les contrôleurs appropriés en fonction de l’URL.
+Exemple :
+•	/clients → ClientController@index (liste des clients).
+•	/rendezvous/create → RendezVousController@create (création d’un rendez-vous).
+Contrôleurs
+Chaque contrôleur gère la logique métier et communique avec les modèles pour interagir avec la base de données.
+Modèles
+Les modèles représentent les entités principales (clients et rendez-vous) et contiennent les méthodes pour exécuter des requêtes.
+Vues
+Les vues sont responsables de l’affichage des données. Elles sont dynamiques et basées sur les informations passées par les contrôleurs.
+
+
+Auteurs : Abdoulaye DIALLO
+Projet réalisé dans le cadre de l'apprentissage des concepts CRUD en PHP/MVC enseigné par M LO.

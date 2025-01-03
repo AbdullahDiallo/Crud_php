@@ -1,0 +1,52 @@
+Gestion Étudiants et Cours - Version 1
+
+Description
+Ce projet est une application web simple permettant de gérer les étudiants et les cours. Il inclut les opérations CRUD (Créer, Lire, Mettre à jour, Supprimer) pour les entités "Étudiant" et "Cours". Le projet est structuré autour de principes de base d'architecture MVC (Modèle-Vue-Contrôleur) pour faciliter la maintenance et l'évolution du code.
+
+Fonctionnalités principales
+1 - Étudiants
+   - Ajouter un étudiant
+   - Afficher la liste des étudiants
+   - Modifier les informations d'un étudiant
+   - Supprimer un étudiant
+
+2 - Cours
+   - Ajouter un cours
+   - Afficher la liste des cours
+   - Modifier les informations d'un cours
+   - Supprimer un cours
+
+Structure du projet :
+
+- public : 
+  - Contient le fichier index.php qui agit comme routeur principal, analysant les URL et dirigeant vers les contrôleurs appropriés.
+
+- app :
+  - models : Contient les modèles `Etudiant.php` et `Cours.php` définissant les méthodes pour interagir avec la base de données.
+  - views : Contient les fichiers de vue pour afficher les interfaces
+  - controllers : Gère la logique métier et coordonne les modèles et les vues 
+  - database.php : Gère la connexion à la base de données MySQL.
+
+- style :
+  - Contient les fichiers CSS pour la mise en page et le design de l'application.
+
+- Points techniques
+- Routeur dans public/index.php :
+  Les URL sont analysées et les requêtes dirigées vers les contrôleurs correspondants.
+
+-  Contrôleurs dédiés :
+  Chaque entité (Étudiant, Cours) possède un contrôleur séparé pour gérer les opérations CRUD.
+
+- Modèles :
+  Les modèles incluent les méthodes nécessaires pour exécuter les opérations CRUD via la base de données.
+
+-  Vues dynamiques :
+  Les fichiers de vue affichent des formulaires et des tableaux de données pour l'interaction utilisateur.
+
+
+- Installation : 
+- Acceder au dossier et démarrez un serveur local avec la commande :   php -S localhost :8000 -t public (vous pouvez utiliser un autre port si vous le souhaiter)
+-  Accédez à l'application via [http://localhost:8000] (http://localhost:8000).
+
+Auteurs : Abdoulaye DIALLO
+Projet réalisé dans le cadre de l'apprentissage des concepts CRUD en PHP/MVC enseigné par M LO.
