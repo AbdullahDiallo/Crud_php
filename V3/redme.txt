@@ -34,11 +34,9 @@ Prérequis
 1.	Installez les dépendances avec Composer :
 2.	Composer Install
 3.	Configurez la base de données dans le fichier App/config/database.php.
-4.	Exécutez les migrations Doctrine pour créer les tables dans la base de données :
-5.	php vendor/bin/doctrine orm:schema-tool:create
-6.	Lancez le serveur intégré PHP :
-7.	Php -S localhost :8000 -t public
-8.	Accédez à l'application dans votre navigateur via http://localhost:8000.
+4.	Lancez le serveur intégré PHP :
+5.	Php -S localhost :8000 -t public
+6.	Accédez à l'application dans votre navigateur via http://localhost:8000.
 
 Auteurs : Abdoulaye DIALLO
 Projet réalisé dans le cadre de l'apprentissage des concepts CRUD en PHP/MVC enseigné par M LO.
